@@ -1,26 +1,36 @@
 {
-  "name": "lab2",
+  "name": "mern-tutorial",
   "version": "1.0.0",
-  "description": "lab 2",
+  "description": "Goalsetter app for youtube tutorial",
   "main": "server.js",
   "scripts": {
-    "start": "node back-end/server.js",
-    "server": "nodemon back-end/server.js",
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev":    "concurrently \"npm run server\" \"npm run client"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "phuc",
+  "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
+    "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
-    "dotenv": "^16.0.1",
+    "dotenv": "^15.0.1",
+    "expo": "^45.0.6",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.4"
+    "mongoose": "^6.4.4",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.0.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
   }
 }
